@@ -19,7 +19,7 @@
 
     <task:scheduled-tasks>
             <!--每小时执行-->
-        <task:scheduled ref="accessTokenTask" method="run" cron="0 0 */1 * * ?" />
+        <task:scheduled ref="accessTokenTask" method="run" cron="0 21 */1 * * ?" />
     </task:scheduled-tasks>
     <!-- 配置数据源 -->
     <context:property-override location="classpath:db.properties"/>
