@@ -1,6 +1,10 @@
 package com.mrjoke.wechat.utils;
 
+/**
+ * 项目中一些通用的常量
+ **/
 public class Constants {
+    //上传文件的路径
     public static final String UPLOAD_ROOT_PATH = "/resources/materials/";
     /******数据库表名******/
     public static final String TOKEN_TABLE = "tb_token";

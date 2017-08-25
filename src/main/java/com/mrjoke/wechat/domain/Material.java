@@ -1,5 +1,7 @@
 package com.mrjoke.wechat.domain;
-
+/**
+ * 素材实体类
+ **/
 public class Material {
     private String user_id;
     private String image_name;

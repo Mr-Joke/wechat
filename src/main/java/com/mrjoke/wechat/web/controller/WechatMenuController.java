@@ -24,6 +24,12 @@ public class WechatMenuController {
     @Autowired
     @Qualifier("accessTokenService")
     private IAccessTokenService accessTokenService;
+
+    /**
+     * 获取公众号菜单信息
+     *
+     * @return 返回菜单信息，json数据
+     **/
     @GetMapping
     @ResponseBody
     public Object menus(){
@@ -43,6 +49,11 @@ public class WechatMenuController {
         return jsonObject;
     }
 
+    /**
+     * 删除公众号菜单信息
+     *
+     * @return 返回删除结果，json数据
+     **/
     @GetMapping("/delete")
     @ResponseBody
     public Object delete(){
@@ -55,6 +66,11 @@ public class WechatMenuController {
         return jsonObject;
     }
 
+    /**
+     * 创建微信公众号菜单
+     *
+     * @return 返回创建结果，json数据
+     **/
     @GetMapping("/create")
     @ResponseBody
     public Object create(){

@@ -19,6 +19,12 @@ import java.io.IOException;
 public class WechatMessageController {
     Logger logger = Logger.getLogger(WechatMessageController.class);
 
+    /**
+     * 接收微信后台转发过来的信息
+     *
+     * @param request http请求
+     * @param response http响应
+     **/
     @RequestMapping(value = "/message",method = {RequestMethod.GET,RequestMethod.POST})
     public void reciever(HttpServletRequest request, HttpServletResponse response) throws IOException {
         WechatServiceImpl wechatService = new WechatServiceImpl(request);

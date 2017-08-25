@@ -1,5 +1,8 @@
 package com.mrjoke.wechat.domain;
 
+/**
+ * 二维码实体类
+ **/
 public class QRCode {
     private int expire_seconds;
     private String action_name;
