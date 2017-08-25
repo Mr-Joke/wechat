@@ -21,11 +21,9 @@ public class WechatMessageController {
 
     @RequestMapping(value = "/message",method = {RequestMethod.GET,RequestMethod.POST})
     public void reciever(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        logger.info("request encoding : " + request.getCharacterEncoding());
         WechatServiceImpl wechatService = new WechatServiceImpl(request);
         String result = wechatService.execute();
         response.setCharacterEncoding("UTF-8");
-        logger.info("response encoding : " + response.getCharacterEncoding());
         response.getWriter().println(result);
     }
 }

@@ -21,10 +21,8 @@ public class WechatServiceImpl extends WechatSupport {
             responseNew("微商城","孩子分房，就找酷漫居","http://www.kumanju.com/favicon.ico","http://wx.kumanju.com");
         }else if (content.equals("帅")){
             responseText("没错，没错，我就是帅，哈哈哈哈……");
-        }else if (content.equals("comagic")){
-            responseNew("comagic","孩子分房，就找酷漫居","http://www.kumanju.com/favicon.ico","http://mall.kumanju.com");
         }else {
-            responseText("Sorry,I can't understand what you say.");
+            responseText("抱歉，我不明白你说什么……");
         }
     }
 
@@ -60,7 +58,7 @@ public class WechatServiceImpl extends WechatSupport {
 
     @Override
     protected void onUnknown() {
-
+        responseText("无法识别消息类型");
     }
 
     @Override
@@ -70,7 +68,7 @@ public class WechatServiceImpl extends WechatSupport {
 
     @Override
     protected void subscribe() {
-        responseText("Thanks for your follow [smirk]");
+        responseImage("mGRzBL_l1BwFs6ZESo6fw4DvF0yypSRmA9iT5nq82F1APOg8-XbDVAJUHL3H56Cd");
     }
 
     @Override
@@ -80,7 +78,8 @@ public class WechatServiceImpl extends WechatSupport {
 
     @Override
     protected void scan() {
-        responseText("Welcome to Mr-Joke official account...");
+        this.logger.info("ticket value : " + this.wechatRequest.getTicket());
+        responseText("欢迎来到小苹果公众号……");
     }
 
     @Override
